@@ -4,9 +4,11 @@ public class Conta {
     protected  int agencia;
     protected  int numero;
     protected  double saldo;
+    private Cliente titular;
 
     // Construtor para inicializar os dados essenciais da conta.
-    public Conta(int agencia, int numero) {
+    public Conta(Cliente titular, int agencia, int numero) {
+        this.titular = titular;
         this.agencia = agencia;
         this.numero = numero;
         this.saldo = 0.0; // Toda conta começa com saldo zero
@@ -61,6 +63,11 @@ public class Conta {
         } else {
             System.out.println("Transferência não realizada.");
         }
+    }
+
+    // Getters para o titular
+    public Cliente getTitular() {
+        return titular;
     }
 
     //Método para consultar o saldo

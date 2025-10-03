@@ -3,8 +3,8 @@ public class ContaPoupanca extends Conta{
     // A taxa de juros pode ser um atributo da conta poupança.
     private double taxaRendimento;
 
-    public ContaPoupanca(int agencia, int numero, double taxaRendimento) {
-        super(agencia, numero);
+    public ContaPoupanca(Cliente titular, int agencia, int numero, double taxaRendimento) {
+        super(titular,agencia, numero);
         this.taxaRendimento = taxaRendimento;
     }
 

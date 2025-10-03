@@ -5,9 +5,9 @@ public class ContaCorrente extends Conta {
 
     private double limiteChequeEspecial;
 
-    public ContaCorrente(int agencia, int numero, double limiteChequeEspecial) {
+    public ContaCorrente(Cliente titular, int agencia, int numero, double limiteChequeEspecial) {
         // "super(...)" chama o construtur da classe mãe (Conta)
-        super(agencia, numero);
+        super(titular, agencia, numero);
         this.limiteChequeEspecial = limiteChequeEspecial;
     }
 
